@@ -48,7 +48,24 @@ import SectionWrapper from "./SectionWrapper.svelte";
       {#each productFeatures as productFeature, index}
       <!-- Long way of passing props -->
         <!-- <ProductCard productFeature={productFeature} index={index}></ProductCard> -->
-        <ProductCard {productFeature} {index}></ProductCard>
+        <ProductCard {productFeature} {index}>
+          <!-- This get rendered in the <slot> inside the ProductCard -->
+          {#if index === 0}
+          Experience a beginner exercise <span
+              class="text-indigo-400 font-medium">master</span
+          > class
+      {:else if index === 1}
+          Lay the foundations for <span
+              class="text-indigo-400 font-medium">routine</span
+          > and consistency
+      {:else}
+          Workouts specific to your <span
+              class="text-indigo-400 font-medium">environment</span
+          >
+          and
+          <span class="text-indigo-400 font-medium">expertise</span>
+      {/if}
+        </ProductCard>
       {/each}
   </div>
 </SectionWrapper>

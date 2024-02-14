@@ -1,5 +1,6 @@
 <script>
-  import Header from "./Header.svelte";
+  import CtAs from "./CTAs.svelte";
+import Header from "./Header.svelte";
   import SectionWrapper from "./SectionWrapper.svelte";
 </script>
 <SectionWrapper>
@@ -14,5 +15,6 @@
       Less thinking & more doing. We're the trainer in your pocket full of <span class="italic">personalized workouts,
         exercise explanations, analytics</span> and much much more.
     </p>
+    <CtAs />
   </div>
 </SectionWrapper>

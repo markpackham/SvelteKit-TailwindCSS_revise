@@ -1,6 +1,6 @@
 <script>
   import CtAs from "./CTAs.svelte";
-import Header from "./Header.svelte";
+  import Header from "./Header.svelte";
   import SectionWrapper from "./SectionWrapper.svelte";
 </script>
 <SectionWrapper>
@@ -16,5 +16,19 @@ import Header from "./Header.svelte";
         exercise explanations, analytics</span> and much much more.
     </p>
     <CtAs />
+    <div class="flex items-center justify-center gap-2 text-base">
+      <p>4.6</p>
+      <!-- Svelte's Each Loop going through an array -->
+      {#each [0,1,2,3,4] as index}
+      <div class="grid place-items-center relative">
+        <i class="fa-solid fa-star opacity-0"></i>
+        <!-- If last item in array "4" set width to 60% & overflow to hidden -->
+        <div class={"absolute top-0 left-0 gird place-items-center " + (index === 4 ? "w-[60%] overflow-hidden" : " ")}>
+        <i class="fa-solid fa-star text-amber-400"></i>
+        </div>
+      </div>
+      {/each}
+
+    </div>
   </div>
 </SectionWrapper>

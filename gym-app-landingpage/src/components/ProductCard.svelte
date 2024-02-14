@@ -11,6 +11,15 @@
     <slot />
 </h4>
 <p>{productFeature.description}</p>
-<div class="flex flex-col gap-3"></div>
+<div class="flex flex-col gap-3">
+    {#each productFeature.featureList as listItem}
+    <div class="flex gap-2 items-center">
+        <div class="gird place-items-center px-1 5 text-xs sm:text-sm aspect-square rounded-full border-[1.5px] bg-white border-solid border-green-300">
+            <i class="fa-solid fa-bolt text-green-400"></i>
+        </div>
+        <p>{listItem}</p>
+    </div>
+    {/each}
+</div>
 </div>
 </div>

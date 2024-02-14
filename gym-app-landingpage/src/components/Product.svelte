@@ -45,8 +45,10 @@ import SectionWrapper from "./SectionWrapper.svelte";
         Features For Everyone
       </h3>
     </div>
-      {#each productFeatures as productFeature}
-        <ProductCard />
+      {#each productFeatures as productFeature, index}
+      <!-- Long way of passing props -->
+        <!-- <ProductCard productFeature={productFeature} index={index}></ProductCard> -->
+        <ProductCard {productFeature} {index}></ProductCard>
       {/each}
   </div>
 </SectionWrapper>

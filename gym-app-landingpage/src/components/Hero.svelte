@@ -1,5 +1,5 @@
 <script>
-  import CtAs from "./CTAs.svelte";
+  import CTAs from "./CTAs.svelte";
   import Header from "./Header.svelte";
   import SectionWrapper from "./SectionWrapper.svelte";
 </script>
@@ -15,7 +15,7 @@
       Less thinking & more doing. We're the trainer in your pocket full of <span class="italic">personalized workouts,
         exercise explanations, analytics</span> and much much more.
     </p>
-    <CtAs />
+    <CTAs />
     <div class="flex items-center justify-center gap-2 text-base">
       <p>4.6</p>
       <!-- Svelte's Each Loop going through an array -->
@@ -28,7 +28,7 @@
         </div>
       </div>
       {/each}
-
+      <p>500+</p>
     </div>
   </div>
 </SectionWrapper>

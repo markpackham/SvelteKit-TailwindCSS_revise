@@ -1,3 +1,9 @@
+<script>
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
+  </script>
+  
+
 <footer class="py-16 sm:py-20 md:py-24 px-4 md:px-8">
     <div
         class="max-w-[1200px] mx-auto w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-base"
@@ -6,7 +12,7 @@
             <h1 class="font-semibold">
                 Swoley <span class="text-indigo-400">Moley</span>
             </h1>
-            <p>©2023 SWOLEY MOLEY LTD. All rights reserved.</p>
+            <p>©{currentYear} SWOLEY MOLEY LTD. All rights reserved.</p>
         </div>
         <div class="flex flex-col gap-4">
             <p class="font-bold poppins text-base sm:text-lg">Support</p>
@@ -43,9 +49,17 @@
                 target="_blank"
                 class="cursor-pointer hover:text-indigo-400 duration-200"
             >
-                <i class="fa-brands fa-youtube pr-2" />
-                YouTube</a
+                <i class="fa-brands fa-odysee pr-2" />
+                Odysee</a
             >
+            <a
+            href=""
+            target="_blank"
+            class="cursor-pointer hover:text-indigo-400 duration-200"
+        >
+            <i class="fa-brands fa-youtube pr-2" />
+            YouTube</a
+        >
             <a
                 href=""
                 target="_blank"

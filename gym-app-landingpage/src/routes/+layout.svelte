@@ -1,5 +1,6 @@
 <script>
   import "../app.css";
+  import CtAs from "../components/CTAs.svelte";
   import Footer from "../components/Footer.svelte";
 
   // Grab global state

@@ -2,6 +2,7 @@
   import "../app.css";
   import CtAs from "../components/CTAs.svelte";
   import Footer from "../components/Footer.svelte";
+  import Header from "../components/Header.svelte";
 
   // Grab global state
   import {openModal} from '../store';
@@ -68,6 +69,14 @@
         </div>
     </div>
 {/if}
+
+<!-- Show menu when we scroll past "Features For Everyone" section -->
+{#if y > outerHeight}
+  <div class="bg-white fixed top-0 left-0 w-full flex flex-col z-20 px-4 fadeIn">
+    <Header />
+  </div>
+{/if}
+
 <slot />
 <Footer />
 <svelte:window bind:scrollY={y} bind:outerHeight/>

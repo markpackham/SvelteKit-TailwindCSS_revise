@@ -9,8 +9,10 @@
   let y;
   $: outerHeight = 0;
 
+  // Routing using the small screen modal
   function reRoute(href){
-    
+    $openModal = false;
+    window.location.href = href;
   }
 </script>
 
@@ -31,7 +33,7 @@
         </div>
         <div class="flex flex-col gap-4 flex-1">
             <button
-                on:click={() => reroute("#product")}
+                on:click={() => reRoute("#product")}
                 class="border-none outline-none p-2 group duration-200 cursor-pointer text-left"
             >
                 <p
@@ -41,7 +43,7 @@
                 </p>
             </button>
             <button
-                on:click={() => reroute("#reviews")}
+                on:click={() => reRoute("#reviews")}
                 class="border-none outline-none p-2 group duration-200 cursor-pointer text-left"
             >
                 <p
@@ -51,7 +53,7 @@
                 </p>
             </button>
             <button
-                on:click={() => reroute("#faqs")}
+                on:click={() => reRoute("#faqs")}
                 class="border-none outline-none p-2 group duration-200 cursor-pointer text-left"
             >
                 <p
